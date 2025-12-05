@@ -21,8 +21,38 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Умный Планировщик Задач',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+          primary: Colors.deepPurple,
+          secondary: Colors.purple,
+          background: Colors.grey[50]!,
+        ),
         useMaterial3: true,
+        fontFamily: 'Roboto',
+        cardTheme: CardThemeData(
+          elevation: 2,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.deepPurple,
+          foregroundColor: Colors.white,
+          elevation: 0,
+          centerTitle: true,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(20),
+            ),
+          ),
+        ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Colors.deepPurple,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+        ),
       ),
       home: const HomeScreen(),
       debugShowCheckedModeBanner: false,
